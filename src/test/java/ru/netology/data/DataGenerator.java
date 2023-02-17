@@ -6,6 +6,7 @@ import com.github.javafaker.service.RandomService;
 
 import java.time.LocalDate;
 import java.time.Year;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class DataGenerator {
@@ -27,33 +28,20 @@ public class DataGenerator {
         return "4444 4444 4444 444";
     }
 
-    public static String getEmptyNumber() {
-        return null;
-    }
 
     public static String getCurrentMonth() {
         LocalDate localDate = LocalDate.now();
         return String.format("%02d", localDate.getMonthValue());
     }
 
-    //отнимает не месяц, а год, как сделать месяц?
+
     public static String getLastMonth() {
         LocalDate localDate = LocalDate.now();
         LocalDate lastMonth = localDate.minusMonths(1);
-        return String.valueOf(lastMonth);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM");
+        String monthValue = lastMonth.format(formatter);
+        return monthValue;
 
-    }
-
-    public static String getInvalidMonth() {
-        return "00";
-    }
-
-    public static String getNonExistingMonth() {
-        return "15";
-    }
-
-    public static String getEmptyMonth() {
-        return null;
     }
 
     public static String getCurrentYear() {
@@ -68,11 +56,6 @@ public class DataGenerator {
     public static String getNextYear() {
         LocalDate localDate = LocalDate.now();
         return String.format("%ty", localDate.plusYears(1));
-    }
-
-    public static String getEmptyYear() {
-        return null;
-
     }
 
     public static String getValidName() {
@@ -105,10 +88,6 @@ public class DataGenerator {
         return faker.name().lastName();
     }
 
-    public static String getNameWithDash() {
-        return "Виталий-Шилкин";
-    }
-
     public static String getTooLongName() {
         return faker.lorem().fixedString(200);
     }
@@ -119,14 +98,6 @@ public class DataGenerator {
 
     public static String getNameWithOneLetter() {
         return faker.lorem().characters(1);
-    }
-
-    public static String getEmptyName() {
-        return null;
-    }
-
-    public static String getNameWithSpace() {
-        return " ";
     }
 
     public static String getValidCvc() {
@@ -142,9 +113,5 @@ public class DataGenerator {
     public static String getCvcWithTwoDigits() {
         FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en"), new RandomService());
         return fakeValuesService.numerify("##");
-    }
-
-    public static String getEmptyCvc() {
-        return null;
     }
 }
