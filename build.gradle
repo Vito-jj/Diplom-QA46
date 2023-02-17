@@ -34,8 +34,15 @@ dependencies {
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testImplementation'io.qameta.allure:allure-selenide:2.20.1'
     testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.36'
+    testImplementation 'postgresql:postgresql:9.3-1102.jdbc41'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.4'
 }
 
 test {
     useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    systemProperty 'DB_url', System.getProperty('DB_url')
+    systemProperty 'DB_user', System.getProperty('DB_user', "app")
+    systemProperty 'DB_password', System.getProperty('DB_password', "pass")
+    systemProperty 'SUT_url', System.getProperty('SUT_url', "http://localhost:8080/")
 }
