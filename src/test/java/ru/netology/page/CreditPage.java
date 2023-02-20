@@ -1,5 +1,6 @@
 package ru.netology.page;
 
+import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.Card;
@@ -23,7 +24,7 @@ public class CreditPage {
 
 
     public CreditPage() {
-        heading.shouldBe(visible);
+        heading.shouldBe(Condition.visible);
     }
 
     public void fulfillData(Card card) {
@@ -40,48 +41,52 @@ public class CreditPage {
         continueButton.click();
     }
 
-    public void successNotification() {
-        $(".notification_status_ok").shouldBe(visible, Duration.ofMillis(15000));
+    public void checkSuccessNotification() {
+        $(".notification_status_ok").shouldBe(Condition.visible, Duration.ofMillis(15000));
     }
 
-    public void declineNotification() {
-        $("notification_status_error").shouldBe(visible, Duration.ofMillis(15000));
+    public void checkDeclineNotification() {
+        $("notification_status_error").shouldBe(Condition.visible, Duration.ofMillis(15000));
     }
 
-    public void invalidFormat() {
+    public void checkInvalidFormat() {
         $(".input__sub").shouldHave(exactText("Неверный формат")).shouldBe(visible);
     }
 
-    public void requiredField() {
+    public void checkRequiredField() {
         $(".input__sub").shouldHave(exactText("Поле обязательно для заполнения")).shouldBe(visible);
 
     }
 
-    public void invalidDate() {
+    public void checkInvalidDate() {
         $(".input__sub").shouldHave(exactText("Неверно указан срок действия карты")).shouldBe(visible);
     }
 
-    public void expiredDate() {
+    public void checkExpiredDate() {
         $(".input__sub").shouldHave(exactText("Истёк срок действия карты")).shouldBe(visible);
     }
 
-    public void invalidName() {
+    public void checkInvalidName() {
         $(".input__sub").shouldHave(exactText("Введите полное имя и фамилию")).shouldBe(visible);
     }
 
-    public void longName() {
+    public void checkLongName() {
         $(".input__sub").shouldHave(exactText("Значение поля не может содержать более 100 символов")).shouldBe(visible);
     }
 
-    public void invalidDataName() {
+    public void checkInvalidDataName() {
         $(".input__sub").shouldHave(exactText("Значение поля может содержать только буквы и дефис")).shouldBe(visible);
     }
 
-    public void shortName() {
+    public void checkShortName() {
         $(".input__sub").shouldHave(exactText("Значение поля должно содержать больше одной буквы")).shouldBe(visible);
     }
 
-    public void invalidCvc() {
+    public void checkInvalidCvc() {
         $(".input__sub").shouldHave(exactText("Значение поля должно содержать 3 цифры")).shouldBe(visible);
+    }
+
+    public void checkAllFieldsAreRequired() {
+        $$(".input__sub").shouldHave(CollectionCondition.size(5)).shouldHave(CollectionCondition.texts("Поле обязательно для заполнения"));
     }
 }
