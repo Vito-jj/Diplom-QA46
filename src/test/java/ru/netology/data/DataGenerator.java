@@ -21,7 +21,7 @@ public class DataGenerator {
     }
 
     public static String getInvalidCardNumber() {
-        return "1111 4444 4444 8888";
+        return "4444 4444 4444 4443";
     }
 
     public static String getShortCardNumber() {

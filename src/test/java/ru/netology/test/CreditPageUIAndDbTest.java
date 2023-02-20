@@ -35,8 +35,6 @@ public class CreditPageUIAndDbTest {
         SelenideLogger.removeListener("allure");
     }
 
-    //HappyPath
-    //passed
     @Test
     @Order(1)
     void shouldBuyInCreditGate() throws SQLException {
@@ -49,7 +47,6 @@ public class CreditPageUIAndDbTest {
         assertEquals("APPROVED", DbUtils.getCreditStatus());
     }
 
-    //passed
     @Test
     @Order(2)
     void shouldBuyInCreditGateWithNameInLatinLetters() throws SQLException {
@@ -62,7 +59,6 @@ public class CreditPageUIAndDbTest {
         assertEquals("APPROVED", DbUtils.getCreditStatus());
     }
 
-    //failed
     @Test
     @Order(3)
     void shouldNotBuyInCreditGateWithDeclinedCardNumber() throws SQLException {
@@ -75,8 +71,6 @@ public class CreditPageUIAndDbTest {
 
     }
 
-    //CardNumberField
-    //failed
     @Test
     @Order(1)
     void shouldNotBuyInCreditGateWithInvalidCardNumber() throws SQLException {
@@ -89,7 +83,6 @@ public class CreditPageUIAndDbTest {
 
     }
 
-    //passed
     @Test
     @Order(2)
     void shouldNotBuyInCreditGateWithShortCardNumber() {
@@ -101,7 +94,6 @@ public class CreditPageUIAndDbTest {
         creditPage.checkInvalidFormat();
     }
 
-    //failed
     @Test
     @Order(3)
     void shouldNotBuyInCreditGateWithEmptyCardNumber() {
@@ -110,11 +102,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkRequiredField(); //TODO Изменить надпись под полем Номер карты на "Поле обязательно для заполнения"
+        creditPage.checkRequiredField();
     }
 
-    //MonthField
-    //failed
     @Test
     @Order(1)
     void shouldNotBuyInCreditGateWithInvalidMonth() {
@@ -123,10 +113,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidDate(); //TODO Изменить надпись под полем Месяц на "Неверно указан срок действия карты"
+        creditPage.checkInvalidDate();
     }
 
-    //passed
     @Test
     @Order(2)
     void shouldNotBuyInCreditGateWithNonExistingMonth() {
@@ -139,7 +128,6 @@ public class CreditPageUIAndDbTest {
 
     }
 
-    //failed
     @Test
     @Order(3)
     void shouldNotBuyInCreditGateWithExpiredMonth() {
@@ -148,10 +136,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkExpiredDate(); //TODO Изменить надпись под полем Месяц на "Истёк срок действия карты"
+        creditPage.checkExpiredDate();
     }
 
-    //failed
     @Test
     @Order(4)
     void shouldNotBuyInCreditGateWithEmptyMonth() {
@@ -160,11 +147,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkRequiredField(); //TODO Изменить надпись под полем Месяц на "Поле обязательно для заполнения"
+        creditPage.checkRequiredField();
     }
 
-    //YearField
-    //passed
     @Test
     @Order(1)
     void shouldNotBuyInCreditGateWithExpiredYear() {
@@ -176,7 +161,6 @@ public class CreditPageUIAndDbTest {
         creditPage.checkExpiredDate();
     }
 
-    //failed
     @Test
     @Order(2)
     void shouldNotBuyInCreditGateWithEmptyYear() {
@@ -185,11 +169,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkRequiredField(); //TODO Изменить надпись под полем Год на "Поле обязательно для заполнения"
+        creditPage.checkRequiredField();
     }
 
-    //NameField
-    //failed
     @Test
     @Order(1)
     void shouldNotBuyInCreditGateWithOnlyName() {
@@ -198,10 +180,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        creditPage.checkInvalidName();
     }
 
-    //failed
     @Test
     @Order(2)
     void shouldNotBuyInCreditGateWithOnlyNameInLatinLetters() {
@@ -210,10 +191,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        creditPage.checkInvalidName();
     }
 
-    //failed
     @Test
     @Order(3)
     void shouldNotBuyInCreditGateWithOnlySurname() {
@@ -222,10 +202,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        creditPage.checkInvalidName();
     }
 
-    //failed
     @Test
     @Order(4)
     void shouldNotBuyInCreditGateWithOnlySurnameInLatinLetters() {
@@ -234,10 +213,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        creditPage.checkInvalidName();
     }
 
-    //failed
     @Test
     @Order(5)
     void shouldNotBuyInCreditGateWithNameAndSurnameWithDash() {
@@ -249,7 +227,6 @@ public class CreditPageUIAndDbTest {
         creditPage.checkInvalidFormat();
     }
 
-    //failed
     @Test
     @Order(6)
     void shouldNotBuyInCreditGateWithTooLongName() {
@@ -258,10 +235,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkLongName(); //TODO Изменить надпись под полем Владелец "Значение поля не может содержать более 100 символов"
+        creditPage.checkLongName();
     }
 
-    //failed
     @Test
     @Order(7)
     void shouldNotBuyInCreditGateWithDigitsInName() {
@@ -270,10 +246,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidDataName(); //TODO Изменить надпись под полем Владелец "Значение поля может содержать только буквы и дефис"
+        creditPage.checkInvalidDataName();
     }
 
-    //failed
     @Test
     @Order(8)
     void shouldNotBuyInCreditGateWithTooShortName() {
@@ -282,10 +257,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkShortName(); //TODO Изменить надпись под полем Владелец "Значение поля должно содержать больше одной буквы"
+        creditPage.checkShortName();
     }
 
-    //passed
     @Test
     @Order(9)
     void shouldNotBuyInCreditGateWithEmptyName() {
@@ -297,7 +271,6 @@ public class CreditPageUIAndDbTest {
         creditPage.checkRequiredField();
     }
 
-    //failed
     @Test
     @Order(10)
     void shouldNotBuyInCreditGateWithSpaceInsteadOfName() {
@@ -306,11 +279,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidDataName(); //TODO Изменить надпись под полем Владелец "Значение поля может содержать только буквы и дефис"
+        creditPage.checkInvalidDataName();
     }
 
-    //CVC/CVVField
-    //failed
     @Test
     @Order(1)
     void shouldNotBuyInCreditGateWithOneDigitInCvc() {
@@ -319,10 +290,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidCvc(); //TODO Изменить надпись под полем CVC "Значение поля должно содержать 3 цифры"
+        creditPage.checkInvalidCvc();
     }
 
-    //failed
     @Test
     @Order(2)
     void shouldNotBuyInCreditGateWithTwoDigitsInCvc() {
@@ -331,10 +301,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkInvalidCvc(); //TODO Изменить надпись под полем CVC "Значение поля должно содержать 3 цифры"
+        creditPage.checkInvalidCvc();
     }
 
-    //failed
     @Test
     @Order(3)
     void shouldNotBuyInCreditGateWithEmptyCvc() {
@@ -343,11 +312,9 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkRequiredField(); //TODO Изменить надпись под полем CVC на "Поле обязательно для заполнения"
+        creditPage.checkRequiredField();
     }
 
-    //AllEmptyFields
-    //failed
     @Test
     @Order(1)
     void shouldNotBuyInCreditGateWithAllEmptyFields() {
@@ -356,7 +323,7 @@ public class CreditPageUIAndDbTest {
         startPage.buyInCredit();
         val creditPage = new CreditPage();
         creditPage.fulfillData(card);
-        creditPage.checkAllFieldsAreRequired(); //TODO Изменить надписи под полями на "Поле обязательно для заполнения"
+        creditPage.checkAllFieldsAreRequired();
 
     }
 }
