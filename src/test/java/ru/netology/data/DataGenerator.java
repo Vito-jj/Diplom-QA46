@@ -114,4 +114,5 @@ public class DataGenerator {
         FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en"), new RandomService());
         return fakeValuesService.numerify("##");
     }
+
 }

@@ -109,7 +109,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkRequiredField(); //TODO Изменить надпись под полем Номер карты на "Поле обязательно для заполнения"
+        paymentPage.checkRequiredField();
     }
 
 
@@ -123,7 +123,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidDate(); //TODO Изменить надпись под полем Месяц на "Неверно указан срок действия карты"
+        paymentPage.checkInvalidDate();
     }
 
     //passed
@@ -148,7 +148,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkExpiredDate(); //TODO Изменить надпись под полем Месяц на "Истёк срок действия карты"
+        paymentPage.checkExpiredDate();
     }
 
     //failed
@@ -160,7 +160,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkRequiredField(); //TODO Изменить надпись под полем Месяц на "Поле обязательно для заполнения"
+        paymentPage.checkRequiredField();
     }
 
 
@@ -186,7 +186,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkRequiredField(); //TODO Изменить надпись под полем Год на "Поле обязательно для заполнения"
+        paymentPage.checkRequiredField();
     }
 
 
@@ -200,7 +200,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        paymentPage.checkInvalidName();
     }
 
     //failed
@@ -212,7 +212,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        paymentPage.checkInvalidName();
     }
 
     //failed
@@ -224,7 +224,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        paymentPage.checkInvalidName();
     }
 
     //failed
@@ -236,7 +236,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidName(); //TODO Изменить надпись под полем Владелец "Введите полное имя и фамилию"
+        paymentPage.checkInvalidName();
     }
 
     //failed
@@ -260,7 +260,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkLongName(); //TODO Изменить надпись под полем Владелец "Значение поля не может содержать более 100 символов"
+        paymentPage.checkLongName();
     }
 
     //failed
@@ -272,7 +272,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidDataName(); //TODO Изменить надпись под полем Владелец "Значение поля может содержать только буквы и дефис"
+        paymentPage.checkInvalidDataName();
     }
 
     //failed
@@ -284,7 +284,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkShortName(); //TODO Изменить надпись под полем Владелец "Значение поля должно содержать больше одной буквы"
+        paymentPage.checkShortName();
     }
 
     //passed
@@ -308,7 +308,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidDataName(); //TODO Изменить надпись под полем Владелец "Значение поля может содержать только буквы и дефис"
+        paymentPage.checkInvalidDataName();
     }
 
 
@@ -322,7 +322,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidCvc(); //TODO Изменить надпись под полем CVC "Значение поля должно содержать 3 цифры"
+        paymentPage.checkInvalidCvc();
     }
 
     //failed
@@ -334,7 +334,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkInvalidCvc(); //TODO Изменить надпись под полем CVC "Значение поля должно содержать 3 цифры"
+        paymentPage.checkInvalidCvc();
     }
 
     //failed
@@ -346,7 +346,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkRequiredField(); //TODO Изменить надпись под полем CVC на "Поле обязательно для заполнения"
+        paymentPage.checkRequiredField();
     }
 
 
@@ -360,7 +360,7 @@ public class PaymentPageUIAndDbTest {
         startPage.buy();
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
-        paymentPage.checkAllFieldsAreRequired(); //TODO Изменить надписи под полями на "Поле обязательно для заполнения"
+        paymentPage.checkAllFieldsAreRequired();
     }
 
 }
