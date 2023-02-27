@@ -19,6 +19,7 @@ import static ru.netology.data.DataGenerator.getValidName;
 public class PaymentPageUIAndDbTest {
     @BeforeAll
     static void setUpAll() {
+
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
@@ -30,6 +31,7 @@ public class PaymentPageUIAndDbTest {
 
     @AfterAll
     static void tearDownAll() {
+
         SelenideLogger.removeListener("allure");
     }
 
@@ -44,10 +46,10 @@ public class PaymentPageUIAndDbTest {
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
         paymentPage.checkSuccessNotification();
-        assertEquals("APPROVED", DbUtils.getPaymentStatus());
+        assertEquals("APPROVED", DbUtils.getPaymentStatus()); //TODO Не корректно работает тест!!!
     }
 
-    //passed
+    //failed
     @Test
     @Order(2)
     void shouldBuyInPaymentGateWithNameInLatinLetters() throws SQLException {
@@ -57,7 +59,7 @@ public class PaymentPageUIAndDbTest {
         val paymentPage = new PaymentPage();
         paymentPage.fulfillData(card);
         paymentPage.checkSuccessNotification();
-        assertEquals("APPROVED", DbUtils.getPaymentStatus());
+        assertEquals("APPROVED", DbUtils.getPaymentStatus()); //TODO Не корректно работает тест!!!
     }
 
     //failed
@@ -337,7 +339,7 @@ public class PaymentPageUIAndDbTest {
         paymentPage.checkInvalidCvc();
     }
 
-    //failed
+    //passed
     @Test
     @Order(3)
     void shouldNotBuyInPaymentGateWithEmptyCvc() {

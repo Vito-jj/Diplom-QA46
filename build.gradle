@@ -32,11 +32,10 @@ dependencies {
     testImplementation 'mysql:mysql-connector-java:8.0.32'
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.4'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation 'com.codeborne:selenide:5.25.1'
+    testImplementation 'com.codeborne:selenide:6.3.5'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testImplementation 'io.rest-assured:rest-assured:4.5.1'
-    implementation group: 'io.qameta.allure', name: 'allure-selenide', version: '2.21.0'
-    testImplementation 'io.qameta.allure:allure-selenide:2.21.0'
+    testImplementation 'io.qameta.allure:allure-selenide:2.16.1'
 
 }
 
