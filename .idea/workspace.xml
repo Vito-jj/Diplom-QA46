@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8767983c-650a-46b0-9c33-850302f9303d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/documentation/Allure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/Report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/CreditPageUIAndDbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/CreditPageUIAndDbTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/PaymentPageUIAndDbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/PaymentPageUIAndDbTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
       <recent name="C:\Users\vito_\IdeaProjects\Diplom-QA46\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CreditPageUIAndDbTest">
+  <component name="RunManager" selected="Gradle.CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters">
     <configuration name="CreditPageUIAndDbTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -112,7 +109,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PaymentPageUIAndDbTest.shouldBuyInPaymentGate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -125,7 +122,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.test.PaymentPageUIAndDbTest.shouldBuyInPaymentGate&quot;" />
+            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -138,6 +135,19 @@
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mysql_service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mysql_service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
       </deployment>
       <method v="2" />
     </configuration>
@@ -154,26 +164,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.postgres_service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="postgres_service" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CreditPageUIAndDbTest" />
+        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters" />
         <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldBuyInCreditGate" />
-        <item itemvalue="Docker.docker-compose.yml.postgres_service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mysql_service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.node_app: Compose Deployment" />
-        <item itemvalue="Gradle.PaymentPageUIAndDbTest.shouldBuyInPaymentGate" />
+        <item itemvalue="Gradle.CreditPageUIAndDbTest" />
       </list>
     </recent_temporary>
   </component>
