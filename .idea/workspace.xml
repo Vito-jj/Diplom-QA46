@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8767983c-650a-46b0-9c33-850302f9303d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/documentation/Allure.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/Report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/Summary.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/Report.md" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/Report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/CreditPageUIAndDbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/CreditPageUIAndDbTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/PaymentPageUIAndDbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/PaymentPageUIAndDbTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +64,8 @@
       <recent name="C:\Users\vito_\IdeaProjects\Diplom-QA46\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters">
-    <configuration name="CreditPageUIAndDbTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithEmptyCvc">
+    <configuration name="CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithAllEmptyFields" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -76,7 +78,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest&quot;" />
+            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithAllEmptyFields&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -86,7 +88,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CreditPageUIAndDbTest.shouldBuyInCreditGate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithEmptyCvc" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -99,7 +101,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldBuyInCreditGate&quot;" />
+            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithEmptyCvc&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -109,7 +111,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithOneDigitInCvc" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -122,7 +124,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters&quot;" />
+            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithOneDigitInCvc&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithSpaceInsteadOfName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithSpaceInsteadOfName&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithTwoDigitsInCvc" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.test.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithTwoDigitsInCvc&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -138,39 +186,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.mysql_service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="mysql_service" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.node_app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="node_app" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldBuyInCreditGateWithNameInLatinLetters" />
-        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldBuyInCreditGate" />
-        <item itemvalue="Docker.docker-compose.yml.mysql_service: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.node_app: Compose Deployment" />
-        <item itemvalue="Gradle.CreditPageUIAndDbTest" />
+        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithEmptyCvc" />
+        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithAllEmptyFields" />
+        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithTwoDigitsInCvc" />
+        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithOneDigitInCvc" />
+        <item itemvalue="Gradle.CreditPageUIAndDbTest.shouldNotBuyInCreditGateWithSpaceInsteadOfName" />
       </list>
     </recent_temporary>
   </component>
